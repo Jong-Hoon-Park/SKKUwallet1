@@ -1,0 +1,594 @@
+<!doctype html>
+<html>
+<head>
+<meta>
+<style>
+    body{
+        display:flex;
+    }
+  .container {
+    display:flex;
+    flex-direction:column;
+}
+.main{
+    width:1150px;    
+    display:flex;
+    background-color:#F4F7FE;
+    flex-direction: column;
+}
+nav{
+    flex-basis:290px;
+    flex-shrink:0;
+}
+.content{
+    display:flex;
+}
+.content nav {
+  border-right: 1px solid gray;
+  height:1024px;
+  width:290px;
+}
+.content aside {
+  border-left: 1px solid gray;
+}
+.logo{
+position: absolute;
+width: 64px;
+height: 26px;
+left: 94px;
+top: 57px;
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 26px;
+line-height: 100%;
+color: #4318FF;
+}
+.nav_container1{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 138px;
+border-radius: 5px;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 15px;
+}
+.nav_container2{
+position: absolute;
+background: white;
+color:black;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 198px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px;
+}
+.nav_container3{
+background-color: #4318FF;
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 258px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px;
+}
+.nav_container4{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 318px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px;
+}
+
+.nav_container1 a{
+position: absolute;
+width: 214px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+}
+.nav_container2 a{
+position: absolute;
+width: 112px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+color:black;
+}
+.nav_container3 a{
+position: absolute;
+width: 214px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+color:white
+}
+.nav_container4 div{
+position: absolute;
+width: 32px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+}
+.main_head{
+    
+position: absolute;
+width: 220px;
+height: 32px;
+left: 343px;
+top: 58px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 32px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #000000;
+}
+.point_graph_container{
+position: absolute;
+width: 1024px;
+height: 307px;
+left: 343px;
+top: 119px;
+background: #FFFFFF;
+border-radius: 20px;
+display:flex;
+flex-direction: column;
+}
+.point_graph_container div{
+position: absolute;
+width: 262px;
+height: 40px;
+left: 31px;
+top: 28px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 42px;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+#point_graph{
+    position: absolute;
+width: 921.5px;
+height: 156.61px;
+left: 70.5px;
+top: 114.79px;
+}
+.point_graph_container div:nth-child(3){
+position: absolute;
+width: 35.78px;
+height: 21.94px;
+left: 37px;
+top: 106px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.point_graph_container div:nth-child(4){
+    position: absolute;
+width: 35.78px;
+height: 21.94px;
+left: 37px;
+top: 153px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.point_graph_container div:nth-child(5){
+    position: absolute;
+width: 35.78px;
+height: 21.94px;
+left: 37px;
+top: 200px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.point_graph_container div:nth-child(6){
+position: absolute;
+width: 35.78px;
+height: 21.94px;
+left: 37px;
+top: 247px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+#all_button{
+    position: absolute;
+width: 71px;
+height: 30px;
+left: 339px;
+top: 468px;
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 10px;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 32px;
+letter-spacing: -0.02em;
+background:white;
+color:black;
+}
+#send_button{
+background: #4318FF;
+border:1px sold #000000;
+box-sizing: border-box;
+border-radius: 10px;
+position: absolute;
+width: 71px;
+height: 29px;
+left: 427px;
+top: 469px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 32px;
+letter-spacing: -0.02em;
+color: #FFFFFF;
+}
+#receive_button{
+background:white;
+border:1px sold #000000;
+box-sizing: border-box;
+border-radius: 10px;
+position: absolute;
+width: 71px;
+height: 29px;
+left: 513px;
+top: 469px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 32px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #000000;
+}
+.history_container{
+position: absolute;
+width: 1025px;
+height: 458px;
+left: 337px;
+top: 518px;
+background: #FFFFFF;
+border-radius: 20px;
+}
+.label_container{
+    display:flex;
+    flex-direction: row;
+}
+.label_container span:nth-child(1){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 57px;
+top: 43px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+color: #4318FF;
+}
+.label_container span:nth-child(2){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 232px;
+top: 43px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+color: #4318FF;
+}
+.label_container span:nth-child(3){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 435px;
+top: 43px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+color: #4318FF;
+}
+.label_container span:nth-child(4){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 598px;
+top: 43px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+color: #4318FF;
+}
+.label_container span:nth-child(5){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 762px;
+top: 43px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+color: #4318FF;
+}
+.label_container span:nth-child(6){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 884px;
+top: 43px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+color: #4318FF;
+}
+.graph_borderline_1{
+position: absolute;
+width: 949px;
+height: 0px;
+left: 43.5px;
+top: 73.84px;
+border: 1px solid #4318FF;
+}
+.tx_platform1 span:nth-child(1){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 79px;
+top: 101px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+}
+.tx_platform1 span:nth-child(2){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 232px;
+top: 101px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+color: #A3AED0;
+}
+.tx_platform1 span:nth-child(3){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 425px;
+top: 101px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+}
+.tx_platform1 span:nth-child(4){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 579px;
+top: 101px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+}
+.tx_platform1 span:nth-child(5){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 733px;
+top: 101px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+color: #009870;
+}
+.tx_platform1 span:nth-child(6){
+position: absolute;
+width: 148.73px;
+height: 21.1px;
+left: 894px;
+top: 101px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+}
+#kakao_img{
+position:absolute;
+left:0;
+top:-3px;
+height: 34.2840690612793px;
+width: 38px;
+border-radius: 25px;
+ 
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <section class="content">
+          <nav>
+            <div class="logo">
+                <h1>SKKUwallet</h1>
+            </div>
+            <div class="nav_container1">
+                <a href="2.html">대시보드</a>
+            </div>
+            <div class="nav_container2">
+                <a href="3.html">My 거래내역</a>
+            </div>
+            <div class="nav_container3">
+                <a href="total_tx.html">전체 거래내역<a>
+            </div>
+            <div class="nav_container4">
+                <div>설정</div>
+            </div>
+          </nav>
+          <main class="main">
+              <div class="main_head">
+                My 거래내역
+              </div>
+              <div class="point_graph_container">
+                  <div>7,893.66 point</div>
+                  <img id="point_graph"src="point_graph.png">
+                  <div>2000</div>
+                  <div>1500</div>
+                  <div>1000</div>
+                  <div>500</div>
+              </div>
+              <div class="button_container">
+                <button id="all_button" onclick="location.href='3.html'">All</button>
+                <button id="send_button"onclick="location.href='send.html'">보낸내역</button>
+                <button id="receive_button"onclick="location.href='receive.html'">받은내역</button>
+            </div>
+            <div class="history_container">
+                <div class="label_container">
+                    <span>플랫폼</span>
+                    <span>시간</span>
+                    <span>FROM</span>
+                    <span>TO</span>
+                    <span>금액</span>
+                    <span>HASH</span>
+                </div>
+                <div class="graph_borderline_1">
+                </div>
+                <div class="platform_tx_container">
+                    <div class="tx_platform1">
+                        <span><img id="kakao_img"src="카카오.jpg">KakaoPay</span>
+                        <span>2021-09-26 14:13:40</span>
+                        <span>0xF503f059...</span>
+                        <span>0xF503f059...</span>
+                        <span>+ 12.34</span>
+                        <span>ebcaef...</span>
+                    </div>
+                </div>
+            </div>
+          </main>
+        </section>
+      </div>
+</body>
+</html>

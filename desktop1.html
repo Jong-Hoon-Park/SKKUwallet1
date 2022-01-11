@@ -1,0 +1,464 @@
+<!doctype html>
+<html>
+<head>
+<meta>
+<style>
+    body{
+        display:flex;
+    }
+  .container {
+    display:flex;
+    flex-direction: column;
+}
+header {
+  border-bottom: 1px solid gray;
+}
+footer {
+  border-top: 1px solid gray;
+  text-align: center;
+}
+main{
+    display:flex;
+    background-color:#E5E5E5;
+    flex-direction: column;
+}
+nav{
+    flex-basis:290px;
+    flex-shrink:0;
+}
+.content{
+    display:flex;
+}
+.content nav {
+  border-right: 1px solid gray;
+  height:1024px;
+  width:290px;
+}
+.content aside {
+  border-left: 1px solid gray;
+}
+.nav_container1{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 138px;
+background: #4318FF;
+border-radius: 5px;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 15px 0px;
+}
+.nav_container2{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 198px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px 0px;
+}
+.nav_container3{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 258px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px 0px;
+}
+.nav_container4{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 318px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px 0px;
+}
+
+.nav_container1 div{
+position: absolute;
+width: 214px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+}
+.nav_container2 div{
+position: absolute;
+width: 112px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+}
+.nav_container3 div{
+position: absolute;
+width: 214px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+}
+.nav_container4 div{
+position: absolute;
+width: 32px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+}
+.point_container{
+position:absolute;
+height: 204px;
+width: 725px;
+left: 317px;
+top: 37px;
+border-radius: 20px;
+background: linear-gradient(180deg, #522CFB 0%, rgba(134, 140, 255, 0) 100%), #868CFF;
+border-radius: 20px;
+display:flex;
+flex-direction:column;
+}
+.point_container div:nth-child(1){
+position: absolute;
+width: 114px;
+height: 22px;
+left: 0px;
+top: 0px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: white;
+}
+.point_container div:nth-child(2){
+margin-top:0px;
+position: absolute;
+width: 230px;
+height: 42px;
+left: 0px;
+top: 0px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color: white;
+}
+.point_container div:nth-child(3){
+position: relative;
+width: 500px;
+height: 42px;
+left: 478px;
+top: 35px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 55px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color:#ffffff;
+}
+.point_container div:nth-child(4){
+  position: relative;
+  top:10px;
+  left:620px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color:white;
+}
+.point_status_container{
+position:relative;
+background-color: white;
+left:27px;
+top:58px;
+width: 355px;
+height: 345px;
+border-radius:20px;
+display:flex;
+flex-direction: column;
+}
+.usage_plus{
+  display:flex;
+  flex-direction: row;
+}
+.usage_plus:nth-child(1){
+position: absolute;
+width: 200px;
+height: 22px;
+left: 40px;
+top: 28px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.usage_plus:nth-child(2){
+position: absolute;
+width: 200px;
+height: 22px;
+left: 40px;
+top: 28px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.Status{
+position: absolute;
+width: 182px;
+height: 42px;
+left: 40px;
+top: 53px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.company_container1{
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+  width:249px;
+  height:42px;
+  left:82px;
+  top:124px;
+}
+.company_container2{
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+  width:249px;
+  height:42px;
+  left:82px;
+  top:204px;
+}
+.company_container3{
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+  width:249px;
+  height:42px;
+  left:82px;
+  top:284px;
+}
+.company_status_container1{
+  position:absolute;
+  right:24px;
+  top:9px;
+  font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: right;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container1 div:nth-child(1){
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container1 div:nth-child(2){
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.company_status_container2{
+  position:absolute;
+  right:24px;
+  top:9px;
+  font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: right;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container2 div:nth-child(1){
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container2 div:nth-child(2){
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.company_status_container3{
+  position:absolute;
+  right:24px;
+  top:9px;
+  font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: right;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container3 div:nth-child(1){
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container3 div:nth-child(2){
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+          <h1>SKKUwallet</h1>
+        </header>
+        <section class="content">
+          <nav>
+            <div class="nav_container1">
+                <div>대시보드</div>
+            </div>
+            <div class="nav_container2">
+                <div>My 거래내역</div>
+            </div>
+            <div class="nav_container3">
+                <div>전체 거래내역</div>
+            </div>
+            <div class="nav_container4">
+                <div>설정</div>
+            </div>
+          </nav>
+          <main>
+            <div class="point_container">
+                <div>
+                    Total Point
+                </div>
+                <div>
+                    총 보유 포인트
+                </div>
+                <div>
+                    7,893
+                </div>
+                <div>
+                  point
+                </div>
+              </div>
+            <div class="point_status_container">
+              <div class="usage_plus">
+                <div>포인트 사용 및 획득</div>
+                <div>+더보기</div>
+              </div>
+              <div class="Status">포인트 현황</div>
+              <div class="company_container1">
+                <div class="date_container1">
+                  <div>KakaoPay</div>
+                  <div>Today,16:36</div>
+                </div>
+                <div class="company_status_container1">
+                  <div>1221</div>
+                </div>
+              </div>
+              <div class="company_container2">
+                <div class="date_container2">
+                  <div>SKKU</div>
+                  <div>23 Jun,13:06</div>
+                </div>
+                <div class="company_status_container2">
+                  <div>5623</div>
+                </div>
+              </div>
+              <div class="company_container3">
+                <div class="date_container3">
+                  <div>NaverPay</div>
+                  <div>21 Jun,19:04</div>
+                </div>
+                <div class="company_status_container3">
+                  <div>1091</div>
+                </div>
+              </div>
+            </div>
+            
+          </main>
+
+        </section>
+        <footer>
+          <a href="https://opentutorials.org/course/1">홈페이지</a>
+        </footer>
+      </div>
+</body>
+</html>

@@ -1,0 +1,908 @@
+<!doctype html>
+<html>
+<head>
+<meta>
+<style>
+    body{
+        display:flex;
+    }
+  .container {
+    display:flex;
+    flex-direction:column;
+}
+.main{
+    width:1150px;    
+    display:flex;
+    background-color:#F4F7FE;
+    flex-direction: column;
+}
+nav{
+    flex-basis:290px;
+    flex-shrink:0;
+}
+.content{
+    display:flex;
+}
+.content nav {
+  border-right: 1px solid gray;
+  height:1024px;
+  width:290px;
+}
+.content aside {
+  border-left: 1px solid gray;
+}
+.logo{
+position: absolute;
+width: 64px;
+height: 26px;
+left: 94px;
+top: 57px;
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 26px;
+line-height: 100%;
+color: #4318FF;
+}
+.nav_container1{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 138px;
+background: #4318FF;
+border-radius: 5px;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 15px;
+}
+.nav_container2{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 198px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px;
+}
+.nav_container3{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 258px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px;
+}
+.nav_container4{
+position: absolute;
+width: 214px;
+height: 45px;
+left: 38px;
+top: 318px;
+border-radius: 5px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 15px;
+}
+
+.nav_container1 a{
+position: absolute;
+width: 214px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+color:white;
+}
+.nav_container2 a{
+position: absolute;
+width: 112px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+}
+.nav_container3 a{
+position: absolute;
+width: 214px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+color:black;
+}
+.nav_container4 div{
+position: absolute;
+width: 32px;
+height: 28px;
+left: 48px;
+top: calc(50% - 28px/2 + 0.5px);
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: -0.02em;
+}
+.point_container{
+position:absolute;
+left: 317px;
+top: 37px;
+height: 204px;
+width: 725px;
+background: linear-gradient(180deg, #522CFB 0%, rgba(134, 140, 255, 0) 100%), #868CFF;
+border-radius: 20px;
+flex-shrink:1;
+display:flex;
+flex-direction:column;
+margin-bottom:0;
+}
+.point_container div:nth-child(1){
+position: absolute;
+width: 114px;
+height: 22px;
+left: 28px;
+top: 23px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: white;
+}
+.point_container div:nth-child(2){
+margin-top:0px;
+position: absolute;
+width: 230px;
+height: 42px;
+left: 28px;
+top: 48px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color: white;
+}
+.point_container div:nth-child(3){
+position: absolute;
+width: 500px;
+height: 42px;
+left: 478px;
+top: 125px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 55px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color:#ffffff;
+}
+.point_container div:nth-child(4){
+  position: absolute;
+  top:135px;
+  left:620px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color:white;
+}
+.point_status_container{
+margin-top:0;
+position:absolute;
+background-color: white;
+left:322px;
+top:262px;
+width: 350px;
+height: 345px;
+border-radius:20px;
+display:flex;
+flex-direction: column;
+}
+.usage{
+  display:flex;
+  flex-direction: row;
+}
+.usage:nth-child(1){
+position: absolute;
+width: 200px;
+height: 22px;
+left: 40px;
+top: 28px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.plus{
+position: absolute;
+width:60px;
+height:42px;
+right:24px;
+top:18px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color: #5E5CE6;
+}
+.Status{
+position: absolute;
+width: 182px;
+height: 42px;
+left: 40px;
+top: 53px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.company_container1{
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+  width:249px;
+  height:42px;
+  left:82px;
+  top:124px;
+}
+.company_container2{
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+  width:249px;
+  height:42px;
+  left:82px;
+  top:204px;
+}
+.company_container3{
+  position:absolute;
+  display:flex;
+  flex-direction: row;
+  width:249px;
+  height:42px;
+  left:82px;
+  top:284px;
+}
+.company_status_container1{
+  position:absolute;
+  right:24px;
+  top:9px;
+  font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: right;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container1 div:nth-child(1){
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container1 div:nth-child(2){
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.company_status_container2{
+  position:absolute;
+  right:24px;
+  top:9px;
+  font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: right;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container2 div:nth-child(1){
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container2 div:nth-child(2){
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.company_status_container3{
+  position:absolute;
+  right:24px;
+  top:9px;
+  font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+text-align: right;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container3 div:nth-child(1){
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.date_container3 div:nth-child(2){
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+#kakao_img{
+position:absolute;
+width:39px;
+height:38px;
+left:31px;
+top:124px;
+}
+#skku_img{
+position:absolute;
+width:39px;
+height:38px;
+left:31px;
+top:205px;  
+}
+#naver_img{
+position:absolute;
+width:39px;
+height:38px;
+left:31px;
+top:284px;  
+}
+.tx_summary_container{
+position:absolute;
+background-color:white;
+left:692px;
+top:262px;
+width: 355px;
+height: 345px;
+border-radius:20px;
+}
+.tx_summary_container div:nth-child(1){
+position: absolute;
+width: 114px;
+height: 22px;
+left: 28px;
+top: 23px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.tx_summary_container div:nth-child(2){
+position: absolute;
+width: 164px;
+height: 42px;
+left: 28px;
+top: 48px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.weekday_container{
+    display: flex;
+    flex-direction: row;
+}
+/* 날짜왜 부모 기준 x? */
+.weekday_container div:nth-child(1){
+position: absolute;
+width: 32px;
+height: 22px;
+left: 715px;
+top: 563px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.weekday_container div:nth-child(2){
+position: absolute;
+width: 39px;
+height: 22px;
+left: 756px;
+top: 563px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.weekday_container div:nth-child(3){
+position: absolute;
+width: 39px;
+height: 22px;
+left: 802px;
+top: 563px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.weekday_container div:nth-child(4){
+position: absolute;
+width: 39px;
+height: 22px;
+left: 847px;
+top: 563px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.weekday_container div:nth-child(5){
+position: absolute;
+width: 39px;
+height: 22px;
+left: 893px;
+top: 563px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.weekday_container div:nth-child(6){
+position: absolute;
+width: 39px;
+height: 22px;
+left: 938px;
+top: 563px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.weekday_container div:nth-child(7){
+position: absolute;
+width: 39px;
+height: 22px;
+left: 984px;
+top: 563px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.weekday_graph{
+position: absolute;
+width: 288.64px;
+height: 145.58px;
+left: 0px;
+top: 0px;
+transform:translate(-50%,-50%);
+list-style-type: none;
+}
+.weekday_graph li div{
+  position:relative;width:50px;height:400px; background:#89b7ff;
+}
+.weekday_graph li di span{
+  position:absolute;left:0;right:0;bottom:0;background:#5e86ff;
+}
+.point_rate_container{
+  position: absolute;
+width: 350px;
+height: 345px;
+left: 322px;
+top: 646px;
+background: #FFFFFF;
+border-radius: 20px;
+}
+.pie-chart {
+		background:
+			radial-gradient(
+				circle closest-side,
+				transparent 66%,
+				white 0
+			),
+			conic-gradient(
+				#4e79a7 0,
+				#4e79a7 18.3%,
+				#f28e2c 0,
+				#f28e2c 93.6%,
+				#59a14f 0,
+				#59a14f 100%
+		);
+		position: absolute;
+    left:147px;
+    top:117px;
+		width: 183px;
+		min-height: 183px;
+		margin: 0;
+		outline: 1px solid #ccc;
+	}
+	.pie-chart h2 {
+		position: absolute;
+		margin: 1rem;
+	}
+	.pie-chart cite {
+		position: absolute;
+		bottom: 0;
+		font-size: 80%;
+		padding: 1rem;
+		color: gray;
+	}
+	.pie-chart figcaption {
+		position: absolute;
+		bottom: 1em;
+		right: 1em;
+		font-size: smaller;
+		text-align: right;
+	}
+	.pie-chart span:after {
+		display: inline-block;
+		content: "";
+		width: 0.8em;
+		height: 0.8em;
+		margin-left: 0.4em;
+		height: 0.8em;
+		border-radius: 0.2em;
+		background: currentColor;
+	}
+.point_rate_container div:nth-child(1){
+  position: absolute;
+width: 114px;
+height: 22px;
+left: 28px;
+top: 23px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.02em;
+color: #A3AED0;
+}
+.point_rate_container div:nth-child(2){
+  position: absolute;
+width: 82px;
+height: 42px;
+left: 28px;
+top: 48px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 42px;
+letter-spacing: -0.02em;
+color: #1B2559;
+}
+.tx_history_container{
+position:absolute;
+width: 350px;
+height: 850px;
+left: 1068px;
+top: 118px;
+background: #FFFFFF;
+border-radius: 20px;
+}
+#user_profile{
+position:absolute;
+height: 125.83333587646484px;
+width: 125.83333587646484px;
+left: 111.58px;
+top:57.58px;
+border-radius: 0px;
+}
+#user_address{
+  position: absolute;
+width: 295px;
+height: 32px;
+left: 27px;
+top: 202px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 32px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #000000;
+}
+.view_etherscan{
+position:absolute;
+height: 41px;
+width: 237px;
+left: 56px;
+top: 253px;
+border-radius: [object Object]px;
+
+}
+#tx_history_head{
+position: absolute;
+width: 90px;
+height: 32px;
+left: 25px;
+top: 359px;
+font-family: DM Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 32px;
+color:black;
+}
+.tx_container1{
+position: absolute;
+width: 288px;
+height: 79px;
+left: 28px;
+top: 401px;
+}
+#tx1{
+height: 79px;
+width: 288px;
+border-radius: nullpx;
+
+}
+.tx_container2{
+position: absolute;
+width: 288px;
+height: 79px;
+left: 28px;
+top: 501px;
+}
+#tx2{
+height: 79px;
+width: 288px;
+border-radius: nullpx;
+}
+.tx_container3{
+position: absolute;
+width: 288px;
+height: 79px;
+left: 28px;
+top: 601px;
+}
+#tx3{
+height: 79px;
+width: 288px;
+border-radius: nullpx;
+}
+.tx_container4{
+position: absolute;
+width: 288px;
+height: 79px;
+left: 28px;
+top: 701px;
+}
+#tx4{
+height: 79px;
+width: 288px;
+border-radius: nullpx;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <section class="content">
+          <nav>
+            <div class="logo">
+                <h1>SKKUwallet</h1>
+            </div>
+            <div class="nav_container1">
+                <a href="2.html">대시보드</a>
+            </div>
+            <div class="nav_container2">
+                <a href="3.html">My 거래내역</a>
+            </div>
+            <div class="nav_container3">
+              <a href="total_tx.html">전체 거래내역</a>
+            </div>
+            <div class="nav_container4">
+                <div>설정</div>
+            </div>
+          </nav>
+          <main class="main">
+            <div class="point_container">
+                <div>
+                    Total Point
+                </div>
+                <div>
+                    총 보유 포인트
+                </div>
+                <div>
+                    7,893
+                </div>
+                <div>
+                  point
+                </div>
+              </div>
+            <div class="point_status_container">
+              <div class="usage">
+                <div>포인트 사용 및 획득</div>
+              </div>
+              <div class="plus">
+                <div>+더보기</div>
+              </div>
+              <div class="Status">포인트 현황</div>
+              <img id="kakao_img" src="카카오.jpg">
+              <div class="company_container1">
+                <div class="date_container1">
+                  <div>KakaoPay</div>
+                  <div>Today,16:36</div>
+                </div>
+                <div class="company_status_container1">
+                  <div>1221</div>
+                </div>
+              </div>
+              <img id="skku_img" src="성균관.jpg">
+              <div class="company_container2">
+                <div class="date_container2">
+                  <div>SKKU</div>
+                  <div>23 Jun,13:06</div>
+                </div>
+                <div class="company_status_container2">
+                  <div>5623</div>
+                </div>
+              </div>
+              <img id="naver_img" src="네이버.png">
+              <div class="company_container3">
+                <div class="date_container3">
+                  <div>NaverPay</div>
+                  <div>21 Jun,19:04</div>
+                </div>
+                <div class="company_status_container3">
+                  <div>1091</div>
+                </div>
+              </div>
+            </div>
+            <div class="tx_summary_container">
+                <div>
+                    이번주 거래 요약
+                </div>
+                <div>
+                    거래요약
+                </div>
+                <ul class="weekday_graph">
+                  <li>
+                    <div>
+                      <span style="height:20%;"></span>
+                    </div>
+                  </li>
+                </div>
+                <div class="weekday_container">
+                    <div>SUN</div>
+                    <div>MON</div>
+                    <div>TUE</div>
+                    <div>WED</div>
+                    <div>THU</div>
+                    <div>FRI</div>
+                    <div>SAT</div>
+                </div>
+            <div class="point_rate_container">
+              <div>보유 포인트 비율</div>
+              <div>Point</div>
+              <figure class="pie-chart">
+                <figcaption>
+                  KakaoPay 17%<span style="color:#4e79a7"></span><br>
+                  성균관대 70%<span style="color:#f28e2c"></span><br>
+                  ETC 6%<span style="color:#59a14f"></span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="tx_history_container">
+              <img id="user_profile" src="user_profile.png">
+              <div id="user_address">0xF503f0595C4AFe27cA79B4d2A6B27A3381d72304</div>
+              <button class="view_etherscan">
+                <a href="https://etherscan.io/"><img src="etherscan_button.png" style="height: 41px;
+                width: 237px;"></a>
+              </button>
+              <!-- 겹침현상발생 -->
+              <div id="tx_history_head">거래내역</div>
+              <!-- 부모와 함께 옮기기? -->
+              <div class="tx_container1">
+                <img id="tx1" src="tx1.png">
+              </div>
+              <div class="tx_container2">
+                <img id="tx1" src="tx1.png">
+              </div>
+              <div class="tx_container3">
+                <img id="tx1" src="tx1.png">
+              </div>
+              <div class="tx_container4">
+                <img id="tx1" src="tx1.png">
+              </div>
+            </div>
+            </div>
+          </main>
+        </section>
+      </div>
+</body>
+</html>
